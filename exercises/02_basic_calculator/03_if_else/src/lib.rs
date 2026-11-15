@@ -2,7 +2,18 @@
 /// `13` if `n` is divisible by `3`,
 /// `17` otherwise.
 fn magic_number(n: u32) -> u32 {
-    todo!()
+    match n % 10 {
+        0 => 12,
+        2 => 12,
+        4 => 12,
+        6 => 12,
+        8 => 12,
+        _ => if n % 3 == 0 {
+            13
+        } else {
+            17
+        }
+    }
 }
 
 #[cfg(test)]
